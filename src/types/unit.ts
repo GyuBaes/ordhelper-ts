@@ -22,7 +22,7 @@ export type Unit = {
   single?: number;
 };
 
-type Material = {
+export type Material = {
   name: string;
   qty: number;
   urn: string;
