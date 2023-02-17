@@ -1,4 +1,4 @@
-import { cloneDeep } from 'lodash';
+import { cloneDeep, sum } from 'lodash';
 import { Material, Unit } from './types/Unit';
 
 export const getSumCombinaionQty = (arr: Unit) => {
@@ -11,6 +11,8 @@ export const getSumCombinaionQty = (arr: Unit) => {
     return arr.material.reduce((acc, cur) => {
       return (acc += cur.qty);
     }, 0);
+
+  return 0;
 };
 
 export const getHaveUnitList = <T extends Unit[], U extends Unit>(
@@ -60,9 +62,26 @@ export const getHaveUnitList = <T extends Unit[], U extends Unit>(
         });
       }
     }
-
     recursive(queue);
   };
+
   recursive(combiUnitQueue as Material[]);
   return result;
+};
+
+export const getPercent = <T extends Unit[], U extends Unit>(
+  curUnitList: T,
+  curUnit: U,
+) => {
+  const sumQty = getSumCombinaionQty(curUnit);
+  const haveUnitList = getHaveUnitList(curUnitList, curUnit);
+  let haveUnitQty = 0;
+  let percent = 0;
+
+  haveUnitList.forEach(el => {
+    haveUnitQty += getSumCombinaionQty(curUnitList[el.index]);
+  });
+
+  percent = (haveUnitQty / sumQty) * 100;
+  return percent;
 };
