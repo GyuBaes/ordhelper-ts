@@ -1,4 +1,4 @@
-import { Unit } from './types/unit';
+import { Unit } from './types/Unit';
 
 export const unitList: Unit[] = [
   { name: '위습', qty: 0, grade: 'common', urn: 'wisp', dpname: '위습' },
