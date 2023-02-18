@@ -1,5 +1,5 @@
-import { cloneDeep, sum } from 'lodash';
-import { Material, Unit } from './types/Unit';
+import { cloneDeep } from 'lodash';
+import { LowestMaterial, Material, Unit, Temp } from './types/Unit';
 
 export const getSumCombinaionQty = (arr: Unit) => {
   if (arr.lowestMaterial)
@@ -84,4 +84,56 @@ export const getPercent = <T extends Unit[], U extends Unit>(
 
   percent = (haveUnitQty / sumQty) * 100;
   return percent;
+};
+
+export const getLessUnit = <T extends Unit[], U extends Unit>(
+  curUnitList: T,
+  curUnit: U,
+) => {
+  const lowestMaterial = curUnit.lowestMaterial
+    ? cloneDeep(curUnit.lowestMaterial)
+    : cloneDeep(curUnit.material);
+  const haveUnitList = getHaveUnitList(curUnitList, curUnit);
+  let haveUnitListToLowestUnit: LowestMaterial[] = [];
+  let appendUnitList: Temp[] = [];
+  const temp = new Map<string, number>();
+
+  haveUnitList.forEach(el => {
+    if (curUnitList[el.index].grade !== 'common') {
+      if (curUnitList[el.index].lowestMaterial) {
+        haveUnitListToLowestUnit = [
+          ...haveUnitListToLowestUnit,
+          ...curUnitList[el.index].lowestMaterial!,
+        ];
+      }
+      if (!curUnitList[el.index].lowestMaterial) {
+        haveUnitListToLowestUnit = [
+          ...haveUnitListToLowestUnit,
+          ...curUnitList[el.index].material!,
+        ];
+      }
+    } else {
+      haveUnitListToLowestUnit.push(el);
+    }
+  });
+
+  for (const { name, qty } of haveUnitListToLowestUnit) {
+    temp.set(name, (temp.get(name) || 0) + qty);
+  }
+  appendUnitList = [...temp].map(([name, qty]) => ({ name, qty }));
+
+  for (const unit of lowestMaterial as LowestMaterial[]) {
+    for (const appendUnit of appendUnitList as Temp[]) {
+      if (unit.name === appendUnit.name) {
+        if (unit.qty <= appendUnit.qty) {
+          unit.qty -= unit.qty;
+        }
+        if (unit.qty > appendUnit.qty) {
+          unit.qty -= appendUnit.qty;
+        }
+      }
+    }
+  }
+
+  return lowestMaterial;
 };
