@@ -29,9 +29,15 @@ export type Material = {
   dpname: string;
   index: number;
 };
+
 export type LowestMaterial = {
   name: string;
   qty: number;
   urn: string;
   dpname: string;
+};
+
+export type Temp = {
+  name: string;
+  qty: number;
 };
