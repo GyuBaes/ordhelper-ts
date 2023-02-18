@@ -73,8 +73,8 @@ export const getPercent = <T extends Unit[], U extends Unit>(
   curUnitList: T,
   curUnit: U,
 ) => {
-  const sumQty = getSumCombinaionQty(curUnit);
   const haveUnitList = getHaveUnitList(curUnitList, curUnit);
+  const sumQty = getSumCombinaionQty(curUnit);
   let haveUnitQty = 0;
   let percent = 0;
 
@@ -136,4 +136,52 @@ export const getLessUnit = <T extends Unit[], U extends Unit>(
   }
 
   return lowestMaterial;
+};
+
+export const setCombinationUnit = <T extends Unit[], U extends Unit>(
+  curUnitList: T,
+  curUnit: U,
+) => {
+  curUnit.qty += 1;
+  const copyUnitList = cloneDeep(curUnitList);
+  const combiUnitQueue = cloneDeep(curUnit.material);
+  let unit: Material | undefined;
+
+  const recursive = (queue: Material[]) => {
+    if (!queue.length) return;
+    unit = queue.shift();
+    // 만약 다 가지고 있다면
+    if (copyUnitList[unit?.index as number].qty >= (unit?.qty as number)) {
+      copyUnitList[unit?.index as number].qty -= unit?.qty as number;
+    }
+
+    // 0개는 아니며 필요 개수보다 작다면
+    if (
+      copyUnitList[unit?.index as number].qty !== 0 &&
+      copyUnitList[unit?.index as number].qty < (unit?.qty as number)
+    ) {
+      (unit as Material).qty -= copyUnitList[unit?.index as number].qty;
+      copyUnitList[unit?.index as number].qty -=
+        copyUnitList[unit?.index as number].qty;
+
+      for (let i = 0; i < (unit as Material).qty; i++) {
+        copyUnitList[unit?.index as number].material?.forEach(el => {
+          queue.push(el);
+        });
+      }
+    }
+
+    // 0개라면
+    if (copyUnitList[unit?.index as number].qty === 0) {
+      for (let i = 0; i < (unit as Material).qty; i++) {
+        copyUnitList[unit?.index as number].material?.forEach(el => {
+          queue.push(el);
+        });
+      }
+    }
+    recursive(queue);
+  };
+
+  recursive(combiUnitQueue as Material[]);
+  return copyUnitList;
 };
