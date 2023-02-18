@@ -1,3 +1,4 @@
+import { Providers } from '@/components/Provider';
 import RootStyleRegistry from './emotion';
 
 export default function RootLayout({ children }: { children: JSX.Element }) {
@@ -5,7 +6,9 @@ export default function RootLayout({ children }: { children: JSX.Element }) {
     <html lang="ko">
       <head />
       <body>
-        <RootStyleRegistry>{children}</RootStyleRegistry>
+        <Providers>
+          <RootStyleRegistry>{children}</RootStyleRegistry>
+        </Providers>
       </body>
     </html>
   );
