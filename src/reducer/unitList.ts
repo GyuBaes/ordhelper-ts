@@ -9,20 +9,15 @@ export const unitSlice = createSlice({
   name: 'unit',
   initialState,
   reducers: {
-    addUnitQty: (state, action: PayloadAction<Unit>) => {
-      console.log(action.payload);
-
-      action.payload.qty += 1;
-      return state;
+    addUnitQty: (state, action: PayloadAction<number>) => {
+      state[action.payload].qty += 1;
     },
-    decrement: (state, action: PayloadAction<Unit>) => {
-      action.payload.qty -= 1;
-      return state;
+    minusUnitQty: (state, action: PayloadAction<number>) => {
+      state[action.payload].qty -= 1;
     },
   },
 });
 
-// Action creators are generated for each case reducer function
-export const { addUnitQty, decrement } = unitSlice.actions;
+export const { addUnitQty, minusUnitQty } = unitSlice.actions;
 
 export default unitSlice.reducer;
