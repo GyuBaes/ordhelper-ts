@@ -1,13 +1,21 @@
 import { Unit } from './types/Unit';
 
 export const unitList: Unit[] = [
-  { name: '위습', qty: 0, grade: 'common', urn: 'wisp', dpname: '위습' },
+  {
+    name: '위습',
+    qty: 0,
+    grade: 'common',
+    urn: 'wisp',
+    dpname: '위습',
+    index: 0,
+  },
   {
     name: '루피',
     qty: 0,
     grade: 'common',
     urn: 'luffy',
     dpname: '루피',
+    index: 1,
     material: [
       {
         name: '위습',
@@ -24,6 +32,7 @@ export const unitList: Unit[] = [
     grade: 'common',
     urn: 'zoro',
     dpname: '조로',
+    index: 2,
     material: [
       {
         name: '위습',
@@ -40,6 +49,7 @@ export const unitList: Unit[] = [
     grade: 'common',
     urn: 'nami',
     dpname: '나미',
+    index: 3,
     material: [
       {
         name: '위습',
@@ -56,6 +66,7 @@ export const unitList: Unit[] = [
     grade: 'common',
     urn: 'usopp',
     dpname: '우솝',
+    index: 4,
     material: [
       {
         name: '위습',
@@ -72,6 +83,7 @@ export const unitList: Unit[] = [
     grade: 'common',
     urn: 'sanji',
     dpname: '상디',
+    index: 5,
     material: [
       {
         name: '위습',
@@ -88,6 +100,7 @@ export const unitList: Unit[] = [
     grade: 'common',
     urn: 'chopper',
     dpname: '쵸파',
+    index: 6,
     material: [
       {
         name: '위습',
@@ -104,6 +117,7 @@ export const unitList: Unit[] = [
     grade: 'common',
     urn: 'buggy',
     dpname: '버기',
+    index: 7,
     material: [
       {
         name: '위습',
@@ -120,6 +134,7 @@ export const unitList: Unit[] = [
     grade: 'common',
     urn: 'nvgun',
     dpname: '총병',
+    index: 8,
     material: [
       {
         name: '위습',
@@ -136,6 +151,7 @@ export const unitList: Unit[] = [
     grade: 'common',
     urn: 'nvsd',
     dpname: '칼병',
+    index: 9,
     material: [
       {
         name: '위습',
@@ -152,6 +168,7 @@ export const unitList: Unit[] = [
     grade: 'uncommon',
     urn: 'bluenouc',
     dpname: '블루노',
+    index: 10,
     material: [
       { name: '총병', qty: 2, urn: 'nvgun', dpname: '총병-흔함', index: 8 },
     ],
@@ -162,6 +179,7 @@ export const unitList: Unit[] = [
     grade: 'uncommon',
     urn: 'fukurouc',
     dpname: '후쿠로',
+    index: 11,
     material: [
       { name: '칼병', qty: 2, urn: 'nvsd', dpname: '칼병-흔함', index: 9 },
     ],
@@ -172,6 +190,7 @@ export const unitList: Unit[] = [
     grade: 'uncommon',
     urn: 'robinuc',
     dpname: '로빈',
+    index: 12,
     material: [
       { name: '나미', qty: 1, urn: 'nami', dpname: '나미-흔함', index: 4 },
       { name: '상디', qty: 1, urn: 'sanji', dpname: '상디-흔함', index: 5 },
@@ -183,6 +202,7 @@ export const unitList: Unit[] = [
     grade: 'uncommon',
     urn: 'bepouc',
     dpname: '베포',
+    index: 13,
     material: [
       { name: '루피', qty: 1, urn: 'luffy', dpname: '루피-흔함', index: 1 },
       { name: '쵸파', qty: 1, urn: 'chopper', dpname: '쵸파-흔함', index: 6 },
@@ -194,6 +214,7 @@ export const unitList: Unit[] = [
     grade: 'uncommon',
     urn: 'brookuc',
     dpname: '브룩',
+    index: 14,
     material: [
       { name: '조로', qty: 1, urn: 'zoro', dpname: '조로-흔함', index: 2 },
       { name: '쵸파', qty: 1, urn: 'chopper', dpname: '쵸파-흔함', index: 6 },
@@ -205,6 +226,7 @@ export const unitList: Unit[] = [
     grade: 'uncommon',
     urn: 'aceuc',
     dpname: '에이스',
+    index: 15,
     material: [
       { name: '루피', qty: 1, urn: 'luffy', dpname: '루피-흔함', index: 1 },
       { name: '총병', qty: 1, urn: 'nvgun', dpname: '총병-흔함', index: 8 },
@@ -216,6 +238,7 @@ export const unitList: Unit[] = [
     grade: 'uncommon',
     urn: 'inazumauc',
     dpname: '이나즈마',
+    index: 16,
     material: [
       { name: '조로', qty: 1, urn: 'zoro', dpname: '조로-흔함', index: 2 },
       { name: '상디', qty: 1, urn: 'sanji', dpname: '상디-흔함', index: 5 },
@@ -227,6 +250,7 @@ export const unitList: Unit[] = [
     grade: 'uncommon',
     urn: 'usoppuc',
     dpname: '저격왕',
+    index: 17,
     material: [
       { name: '우솝', qty: 2, urn: 'usopp', dpname: '우솝-흔함', index: 4 },
     ],
@@ -237,6 +261,7 @@ export const unitList: Unit[] = [
     grade: 'uncommon',
     urn: 'chopperuc',
     dpname: '쵸파 럼블볼',
+    index: 18,
     material: [
       { name: '쵸파', qty: 2, urn: 'chopper', dpname: '쵸파-흔함', index: 6 },
     ],
@@ -247,6 +272,7 @@ export const unitList: Unit[] = [
     grade: 'uncommon',
     urn: 'tasigiuc',
     dpname: '타시기',
+    index: 19,
     material: [
       { name: '총병', qty: 1, urn: 'nvgun', dpname: '총병-흔함', index: 8 },
       { name: '칼병', qty: 1, urn: 'nvsd', dpname: '칼병-흔함', index: 9 },
@@ -258,6 +284,7 @@ export const unitList: Unit[] = [
     grade: 'uncommon',
     urn: 'peronauc',
     dpname: '페로나',
+    index: 20,
     material: [
       { name: '나미', qty: 1, urn: 'nami', dpname: '나미-흔함', index: 3 },
       { name: '버기', qty: 1, urn: 'buggy', dpname: '버기-흔함', index: 7 },
@@ -269,6 +296,7 @@ export const unitList: Unit[] = [
     grade: 'uncommon',
     urn: 'frankyuc',
     dpname: '프랑키',
+    index: 21,
     material: [
       { name: '루피', qty: 1, urn: 'luffy', dpname: '루피-흔함', index: 1 },
       { name: '우솝', qty: 1, urn: 'usopp', dpname: '우솝-흔함', index: 4 },
@@ -280,6 +308,7 @@ export const unitList: Unit[] = [
     grade: 'uncommon',
     urn: 'hatchanuc',
     dpname: '하찌',
+    index: 22,
     material: [
       { name: '나미', qty: 1, urn: 'nami', dpname: '나미-흔함', index: 3 },
       { name: '총병', qty: 1, urn: 'nvgun', dpname: '총병-흔함', index: 8 },
@@ -291,6 +320,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'drakeuq',
     dpname: 'X-드레이크',
+    index: 23,
     material: [
       {
         name: '타시기안흔함',
@@ -320,6 +350,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'eneluq',
     dpname: '갓 에넬',
+    index: 24,
     material: [
       {
         name: '저격왕안흔함',
@@ -350,6 +381,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'moriauq',
     dpname: '겟코 모리아',
+    index: 25,
     material: [
       {
         name: '브룩안흔함',
@@ -374,6 +406,7 @@ export const unitList: Unit[] = [
     dpname: '나미',
     onOffDecreaseSpeed: 5,
     cautionAura: true,
+    index: 26,
     material: [
       { name: '나미', qty: 3, urn: 'nami', dpname: '나미-흔함', index: 3 },
     ],
@@ -384,6 +417,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'robinuq',
     dpname: '로빈',
+    index: 27,
     material: [
       {
         name: '로빈안흔함',
@@ -407,6 +441,7 @@ export const unitList: Unit[] = [
     urn: 'lawuq',
     dpname: '로우',
     description: '공속증가(W)',
+    index: 28,
     material: [
       {
         name: '베포안흔함',
@@ -438,6 +473,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'lucciuq',
     dpname: '루치',
+    index: 29,
     material: [
       {
         name: '후쿠로안흔함',
@@ -468,6 +504,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'luffyuq',
     dpname: '루피',
+    index: 30,
     material: [
       { name: '루피', qty: 3, urn: 'luffy', dpname: '루피-흔함', index: 1 },
     ],
@@ -478,6 +515,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'marcouq',
     dpname: '마르코',
+    index: 31,
     material: [
       {
         name: '블루노안흔함',
@@ -509,6 +547,7 @@ export const unitList: Unit[] = [
     dpname: '바질호킨스',
     decreaseDefense: 3,
     cautionAura: true,
+    index: 32,
     material: [
       {
         name: '페로나안흔함',
@@ -540,6 +579,7 @@ export const unitList: Unit[] = [
     urn: 'buggyuq',
     dpname: '버기',
     description: '분해(2,3)',
+    index: 33,
     material: [
       { name: '버기', qty: 3, urn: 'buggy', dpname: '버기-흔함', index: 7 },
     ],
@@ -550,6 +590,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'bonkureiuq',
     dpname: '봉쿠레',
+    index: 34,
     material: [
       {
         name: '이나즈마안흔함',
@@ -579,6 +620,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'sanjiuq',
     dpname: '상디',
+    index: 35,
     material: [
       { name: '상디', qty: 3, urn: 'sanji', dpname: '상디-흔함', index: 5 },
     ],
@@ -591,6 +633,7 @@ export const unitList: Unit[] = [
     dpname: '스모커',
     decreaseSpeed: 7,
     cautionAura: true,
+    index: 36,
     material: [
       {
         name: '타시기안흔함',
@@ -613,6 +656,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'squaduq',
     dpname: '스쿼드',
+    index: 37,
     material: [
       {
         name: '쵸파안흔함',
@@ -643,6 +687,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'aronuq',
     dpname: '아론',
+    index: 38,
     material: [
       {
         name: '하찌안흔함',
@@ -665,6 +710,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'aceuq',
     dpname: '에이스',
+    index: 39,
     material: [
       {
         name: '에이스안흔함',
@@ -687,6 +733,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'usoppuq',
     dpname: '우솝',
+    index: 40,
     material: [
       {
         name: '저격왕안흔함',
@@ -706,6 +753,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'inazumauq',
     dpname: '이나즈마',
+    index: 41,
     material: [
       {
         name: '이나즈마안흔함',
@@ -726,6 +774,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'zorouq',
     dpname: '조로',
+    index: 42,
     material: [
       { name: '조로', qty: 3, urn: 'zoro', dpname: '조로-흔함', index: 2 },
     ],
@@ -736,6 +785,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'jinbeuq',
     dpname: '징베',
+    index: 43,
     material: [
       {
         name: '에이스안흔함',
@@ -766,6 +816,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'chakauq',
     dpname: '챠카',
+    index: 44,
     material: [
       {
         name: '블루노안흔함',
@@ -796,6 +847,7 @@ export const unitList: Unit[] = [
     urn: 'chopperbruq',
     dpname: '쵸파 두뇌강화',
     decreaseDefense: 3,
+    index: 45,
     material: [
       {
         name: '쵸파안흔함',
@@ -827,6 +879,7 @@ export const unitList: Unit[] = [
     urn: 'choppergduq',
     dpname: '쵸파 가드포인트',
     description: '공증',
+    index: 46,
     material: [
       {
         name: '쵸파안흔함',
@@ -857,6 +910,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'begeuq',
     dpname: '갱 벳지',
+    index: 47,
     material: [
       {
         name: '후쿠로안흔함',
@@ -880,6 +934,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'crouq',
     dpname: '캡틴크로',
+    index: 48,
     material: [
       {
         name: '하찌안흔함',
@@ -904,6 +959,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'kumauq',
     dpname: '쿠마',
+    index: 49,
     material: [
       {
         name: '베포안흔함',
@@ -936,6 +992,7 @@ export const unitList: Unit[] = [
     dpname: '크로커다일',
     decreaseSpeed: 7,
     cautionAura: true,
+    index: 50,
     material: [
       {
         name: '프랑키안흔함',
@@ -967,6 +1024,7 @@ export const unitList: Unit[] = [
     dpname: '키드',
     decreaseSpeed: 7,
     cautionAura: true,
+    index: 51,
     material: [
       {
         name: '페로나안흔함',
@@ -997,6 +1055,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'killeruq',
     dpname: '킬러',
+    index: 52,
     material: [
       {
         name: '타시기안흔함',
@@ -1029,6 +1088,7 @@ export const unitList: Unit[] = [
     urn: 'pirateuq',
     dpname: '파이러츠 도킹 5',
     description: '마방깍(Q)',
+    index: 53,
     material: [
       {
         name: '프랑키안흔함',
@@ -1051,6 +1111,7 @@ export const unitList: Unit[] = [
     grade: 'unique',
     urn: 'helmeppouq',
     dpname: '헤르메포',
+    index: 54,
     material: [
       {
         name: '브룩안흔함',
@@ -1077,6 +1138,7 @@ export const unitList: Unit[] = [
     decreaseSpeed: 25,
     combiDescription: '압살롬',
     cautionAura: true,
+    index: 55,
     material: [
       {
         name: '상디특별함',
@@ -1115,6 +1177,7 @@ export const unitList: Unit[] = [
     dpname: '캡틴키드',
     decreaseSpeed: 20,
     cautionAura: true,
+    index: 56,
     material: [
       {
         name: '키드특별함',
@@ -1157,6 +1220,7 @@ export const unitList: Unit[] = [
     decreaseSpeed: 20,
     description: '공증(Q)',
     cautionAura: true,
+    index: 57,
     material: [
       {
         name: '크로커다일특별함',
@@ -1200,6 +1264,7 @@ export const unitList: Unit[] = [
     decreaseSpeed: 12,
     stun: 0.1,
     cautionAura: true,
+    index: 58,
     material: [
       {
         name: '로빈특별함',
@@ -1240,6 +1305,7 @@ export const unitList: Unit[] = [
     decreaseSpeed: 15,
     cautionAura: true,
     decreaseDefense: 5,
+    index: 59,
     material: [
       {
         name: 'X-드레이크특별함',
@@ -1279,6 +1345,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'garprare',
     dpname: '거프',
+    index: 60,
     material: [
       {
         name: '스모커특별함',
@@ -1315,6 +1382,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'teachrare',
     dpname: '검은수염',
+    index: 61,
     material: [
       {
         name: '에이스특별함',
@@ -1353,6 +1421,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'jokerrare',
     dpname: '도플라밍고',
+    index: 62,
     material: [
       {
         name: '쵸파가드특별함',
@@ -1393,6 +1462,7 @@ export const unitList: Unit[] = [
     urn: 'lawrare',
     dpname: '로우',
     description: '공속⬆(W)',
+    index: 63,
     material: [
       {
         name: '로우특별함',
@@ -1434,6 +1504,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'luffyrare',
     dpname: '루피',
+    index: 64,
     material: [
       {
         name: '루피특별함',
@@ -1472,6 +1543,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'ryumarare',
     dpname: '류마',
+    index: 65,
     material: [
       {
         name: '겟코모리아특별함',
@@ -1519,6 +1591,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'marcorare',
     dpname: '마르코',
+    index: 66,
     material: [
       {
         name: '마르코특별함',
@@ -1557,6 +1630,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'magellanrare',
     dpname: '마젤란',
+    index: 67,
     material: [
       {
         name: '징베특별함',
@@ -1594,6 +1668,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'momongarare',
     dpname: '모몬가',
+    index: 68,
     material: [
       {
         name: '징베특별함',
@@ -1633,6 +1708,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'mihawkrare',
     dpname: '미호크',
+    index: 69,
     material: [
       {
         name: '조로특별함',
@@ -1670,6 +1746,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'bartolomeorare',
     dpname: '바르토로메오',
+    index: 70,
     material: [
       {
         name: '캡틴크로특별함',
@@ -1709,6 +1786,7 @@ export const unitList: Unit[] = [
     urn: 'burgessrare',
     dpname: '바제스',
     stun: 0.1,
+    index: 71,
     material: [
       {
         name: '바질호킨스특별함',
@@ -1749,6 +1827,7 @@ export const unitList: Unit[] = [
     dpname: '바질 항마',
     decreaseDefense: 10,
     cautionAura: true,
+    index: 72,
     material: [
       {
         name: '바질호킨스특별함',
@@ -1789,6 +1868,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'deckenrare',
     dpname: '반더데켄',
+    index: 73,
     material: [
       {
         name: '아론특별함',
@@ -1829,6 +1909,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'baby5rare',
     dpname: '베이비5',
+    index: 74,
     material: [
       {
         name: '파이러츠특별함',
@@ -1868,6 +1949,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'beckmanrare',
     dpname: '벤베크만',
+    index: 75,
     material: [
       {
         name: '우솝특별함',
@@ -1907,6 +1989,7 @@ export const unitList: Unit[] = [
     urn: 'brookrare',
     dpname: '브룩',
     description: '공속⬆',
+    index: 76,
     material: [
       {
         name: '겟코모리아특별함',
@@ -1945,6 +2028,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'vivirare',
     dpname: '비비',
+    index: 77,
     material: [
       {
         name: '챠카특별함',
@@ -1985,6 +2069,7 @@ export const unitList: Unit[] = [
     urn: 'saborare',
     dpname: '사보',
     decreaseDefense: 10,
+    index: 78,
     material: [
       {
         name: '이나즈마특별함',
@@ -2023,6 +2108,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'sanjirare',
     dpname: '상디',
+    index: 79,
     material: [
       {
         name: '상디특별함',
@@ -2062,6 +2148,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'shanksrare',
     dpname: '샹크스',
+    index: 80,
     material: [
       {
         name: '버기특별함',
@@ -2097,6 +2184,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'sentoumarurare',
     dpname: '센토마루',
+    index: 81,
     material: [
       {
         name: '쿠마특별함',
@@ -2139,6 +2227,7 @@ export const unitList: Unit[] = [
     urn: 'sugarrare',
     dpname: '슈가',
     description: '마젠0.6',
+    index: 82,
     material: [
       {
         name: '쵸파두뇌특별함',
@@ -2178,6 +2267,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'shiryurare',
     dpname: '시류',
+    index: 83,
     material: [
       {
         name: '갱벳지특별함',
@@ -2215,6 +2305,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'akainurare',
     dpname: '아카이누',
+    index: 84,
     material: [
       {
         name: '에이스특별함',
@@ -2253,6 +2344,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'oarsrare',
     dpname: '오즈',
+    index: 85,
     material: [
       {
         name: '겟코모리아특별함',
@@ -2282,6 +2374,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'wiperrare',
     dpname: '와이퍼',
+    index: 86,
     material: [
       {
         name: '갓에넬특별함',
@@ -2320,6 +2413,7 @@ export const unitList: Unit[] = [
     dpname: '우솝',
     stun: 0.1,
     description: '블링크',
+    index: 87,
     material: [
       {
         name: '우솝특별함',
@@ -2359,6 +2453,7 @@ export const unitList: Unit[] = [
     dpname: '이완코브',
     stun: 0.1,
     description: '공증(Q)',
+    index: 88,
     material: [
       {
         name: '이나즈마특별함',
@@ -2398,6 +2493,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'zeffrare',
     dpname: '제프',
+    index: 89,
     material: [
       {
         name: '봉쿠레특별함',
@@ -2436,6 +2532,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'zororare',
     dpname: '조로',
+    index: 90,
     material: [
       {
         name: '조로특별함',
@@ -2474,6 +2571,7 @@ export const unitList: Unit[] = [
     urn: 'jozurare',
     dpname: '죠즈',
     stun: 0.1,
+    index: 91,
     material: [
       {
         name: '스쿼드특별함',
@@ -2515,6 +2613,7 @@ export const unitList: Unit[] = [
     urn: 'chopperrare',
     dpname: '쵸파 혼 포인트',
     description: '공증',
+    index: 92,
     material: [
       {
         name: '쵸파가드특별함',
@@ -2554,6 +2653,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'kakurare',
     dpname: '카쿠',
+    index: 93,
     material: [
       {
         name: '루치특별함',
@@ -2592,6 +2692,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'kizarurare',
     dpname: '키자루',
+    index: 94,
     material: [
       {
         name: '헤르메포특별함',
@@ -2632,6 +2733,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'kinemonrare',
     dpname: '킨에몬',
+    index: 95,
     material: [
       {
         name: '킬러특별함',
@@ -2672,6 +2774,7 @@ export const unitList: Unit[] = [
     grade: 'rare',
     urn: 'hancockrare',
     dpname: '핸콕',
+    index: 96,
     material: [
       {
         name: '나미특별함',
@@ -2713,6 +2816,7 @@ export const unitList: Unit[] = [
     description: '스토리깍 45 공속⬆ 공증',
     burgess: false,
     combiDescription: '목재3',
+    index: 97,
     material: [
       {
         name: '이완코브희귀함',
@@ -2758,6 +2862,7 @@ export const unitList: Unit[] = [
     description: '공속⬆',
     burgess: false,
     combiDescription: '목재3',
+    index: 98,
     material: [
       {
         name: '브룩희귀함',
@@ -2803,6 +2908,7 @@ export const unitList: Unit[] = [
     burgess: false,
     singleStun: '단일스턴',
     combiDescription: '목재3',
+    index: 99,
     material: [
       {
         name: '바르토로메오희귀함',
@@ -2849,6 +2955,7 @@ export const unitList: Unit[] = [
     burgess: false,
     combiDescription: '목재3',
     singleStun: '단일스턴',
+    index: 100,
     material: [
       {
         name: '샹크스희귀함',
@@ -2893,6 +3000,7 @@ export const unitList: Unit[] = [
     stun: 1,
     burgess: false,
     combiDescription: '목재3',
+    index: 101,
     material: [
       {
         name: '와이퍼희귀함',
@@ -2938,6 +3046,7 @@ export const unitList: Unit[] = [
     burgess: false,
     cautionAura: true,
     combiDescription: '목재3',
+    index: 102,
     material: [
       {
         name: '킨에몬희귀함',
@@ -2983,6 +3092,7 @@ export const unitList: Unit[] = [
     description: '무제한블링크 자석',
     burgess: true,
     combiDescription: '목재3',
+    index: 103,
     material: [
       {
         name: '센토마루희귀함',
@@ -3030,6 +3140,7 @@ export const unitList: Unit[] = [
     burgess: true,
     attack: 'ad',
     combiDescription: '레일리 | 목재5',
+    index: 104,
     material: [
       {
         name: '센토마루희귀함',
@@ -3068,6 +3179,7 @@ export const unitList: Unit[] = [
     burgess: true,
     attack: 'ad',
     combiDescription: '목재3',
+    index: 105,
     material: [
       {
         name: '마르코희귀함',
@@ -3113,6 +3225,7 @@ export const unitList: Unit[] = [
     burgess: false,
     attack: 'ad',
     combiDescription: '목재3',
+    index: 106,
     material: [
       {
         name: '아카이누희귀함',
@@ -3161,6 +3274,7 @@ export const unitList: Unit[] = [
     attack: 'ad',
     combiDescription: '목재3',
     singleStun: '단일스턴',
+    index: 107,
     material: [
       {
         name: '거프희귀함',
@@ -3205,6 +3319,7 @@ export const unitList: Unit[] = [
     burgess: false,
     attack: 'ad',
     combiDescription: '목재3',
+    index: 108,
     material: [
       {
         name: '도플라밍고희귀함',
@@ -3250,6 +3365,7 @@ export const unitList: Unit[] = [
     attack: 'ad',
     combiDescription: '목재3',
     singleStun: '단일스턴',
+    index: 109,
     material: [
       {
         name: '마르코희귀함',
@@ -3295,6 +3411,7 @@ export const unitList: Unit[] = [
     burgess: true,
     attack: 'ad',
     combiDescription: '목재3',
+    index: 110,
     material: [
       {
         name: '쵸파희귀함',
@@ -3342,6 +3459,7 @@ export const unitList: Unit[] = [
     attack: 'ad',
     combiDescription: '목재3',
     singleStun: '단일스턴',
+    index: 111,
     material: [
       {
         name: '우솝희귀함',
@@ -3388,6 +3506,7 @@ export const unitList: Unit[] = [
     burgess: false,
     attack: 'ad',
     combiDescription: '목재3',
+    index: 112,
     material: [
       {
         name: '제프희귀함',
@@ -3437,6 +3556,7 @@ export const unitList: Unit[] = [
     burgess: false,
     attack: 'ad',
     combiDescription: '목재3',
+    index: 113,
     material: [
       {
         name: 'X-드레이크희귀함',
@@ -3484,6 +3604,7 @@ export const unitList: Unit[] = [
     burgess: true,
     attack: 'ad',
     combiDescription: '목재3',
+    index: 114,
     material: [
       {
         name: '죠즈희귀함',
@@ -3530,6 +3651,7 @@ export const unitList: Unit[] = [
     burgess: false,
     attack: 'ap',
     combiDescription: '목재3',
+    index: 115,
     material: [
       {
         name: '검은수염희귀함',
@@ -3576,6 +3698,7 @@ export const unitList: Unit[] = [
     attack: 'ap',
     cautionAura: true,
     combiDescription: '목재3',
+    index: 116,
     material: [
       {
         name: '비비희귀함',
@@ -3622,6 +3745,7 @@ export const unitList: Unit[] = [
     burgess: true,
     attack: 'ap',
     combiDescription: '목재3',
+    index: 117,
     material: [
       {
         name: '키드희귀함',
@@ -3669,6 +3793,7 @@ export const unitList: Unit[] = [
     burgess: false,
     attack: 'ap',
     combiDescription: '목재3',
+    index: 118,
     material: [
       {
         name: '마젤란희귀함',
@@ -3715,6 +3840,7 @@ export const unitList: Unit[] = [
     burgess: false,
     attack: 'ap',
     combiDescription: '목재3',
+    index: 119,
     material: [
       {
         name: '로우희귀함',
@@ -3760,6 +3886,7 @@ export const unitList: Unit[] = [
     burgess: false,
     attack: 'ap',
     combiDescription: '목재3',
+    index: 120,
     material: [
       {
         name: '루피희귀함',
@@ -3806,6 +3933,7 @@ export const unitList: Unit[] = [
     combiDescription: '목재3 압살롬',
     boss: '광잡',
     singleStun: '단일스턴',
+    index: 121,
     material: [
       {
         name: '오즈희귀함',
@@ -3851,6 +3979,7 @@ export const unitList: Unit[] = [
     description: '자동삭제',
     burgess: false,
     combiDescription: '목재3',
+    index: 122,
     material: [
       {
         name: '오즈희귀함',
@@ -3894,6 +4023,7 @@ export const unitList: Unit[] = [
     description: '마젠1.25 삭제(R) 수확',
     burgess: false,
     combiDescription: '목재3',
+    index: 123,
     material: [
       {
         name: '슈가희귀함',
@@ -3940,6 +4070,7 @@ export const unitList: Unit[] = [
     attack: 'ap',
     combiDescription: '목재3',
     singleStun: '단일스턴',
+    index: 124,
     material: [
       {
         name: '바제스희귀함',
@@ -3984,6 +4115,7 @@ export const unitList: Unit[] = [
     burgess: true,
     combiDescription: '목재3',
     singleStun: '단일스턴',
+    index: 125,
     material: [
       {
         name: '반더데켄희귀함',
@@ -4028,6 +4160,7 @@ export const unitList: Unit[] = [
     description: '공속⬆ +공속(2명)',
     burgess: false,
     combiDescription: '고대의 배 | 목재5',
+    index: 126,
     material: [
       {
         name: '키자루희귀함',
@@ -4064,6 +4197,7 @@ export const unitList: Unit[] = [
     description: '체젠1.6 공증 자폭',
     burgess: false,
     combiDescription: '목재3',
+    index: 127,
     material: [
       {
         name: '쵸파희귀함',
@@ -4111,6 +4245,7 @@ export const unitList: Unit[] = [
     attack: 'ap',
     combiDescription: '목재3',
     singleStun: '단일스턴',
+    index: 128,
     material: [
       {
         name: '카쿠희귀함',
@@ -4157,6 +4292,7 @@ export const unitList: Unit[] = [
     burgess: false,
     attack: 'ap',
     combiDescription: '목재3',
+    index: 129,
     material: [
       {
         name: '시류희귀함',
@@ -4203,6 +4339,7 @@ export const unitList: Unit[] = [
     burgess: false,
     attack: 'ap',
     combiDescription: '목재3',
+    index: 130,
     material: [
       {
         name: '상디희귀함',
@@ -4250,6 +4387,7 @@ export const unitList: Unit[] = [
     attack: 'ap',
     combiDescription: '목재3',
     singleStun: '단일스턴',
+    index: 131,
     material: [
       {
         name: '류마희귀함',
@@ -4297,6 +4435,7 @@ export const unitList: Unit[] = [
     attack: 'ap',
     combiDescription: '목재3',
     singleStun: '단일스턴',
+    index: 132,
     material: [
       {
         name: '조로희귀함',
@@ -4341,6 +4480,7 @@ export const unitList: Unit[] = [
     attack: 'ap',
     combiDescription: '목재3',
     singleStun: '단일스턴',
+    index: 133,
     material: [
       {
         name: '핸콕희귀함',
@@ -4386,6 +4526,7 @@ export const unitList: Unit[] = [
     burgess: false,
     cautionAura: true,
     combiDescription: '봉쿠레조합, bonkurei',
+    index: 134,
     material: [
       {
         name: '핸콕희귀함',
@@ -4436,6 +4577,7 @@ export const unitList: Unit[] = [
     burgess: false,
     cautionAura: true,
     combiDescription: '아오키지조합, aokiji',
+    index: 135,
     material: [
       {
         name: '아오키지희귀함',
@@ -4483,6 +4625,7 @@ export const unitList: Unit[] = [
     burgess: false,
     cautionAura: true,
     combiDescription: '이완코브조합, ivankov',
+    index: 136,
     material: [
       {
         name: '이완코브희귀함',
@@ -4529,6 +4672,7 @@ export const unitList: Unit[] = [
     burgess: false,
     combiDescription: '레일리 | 피셔타이거조합, tiger',
     singleStun: '단일스턴',
+    index: 137,
     material: [
       {
         name: '반더데켄희귀함',
@@ -4575,6 +4719,7 @@ export const unitList: Unit[] = [
     combiDescription: '레베카조합, rebecca',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 138,
     material: [
       {
         name: '슈가희귀함',
@@ -4614,6 +4759,7 @@ export const unitList: Unit[] = [
     burgess: true,
     combiDescription: '료쿠규조합, aramaki',
     attack: 'ad',
+    index: 139,
     material: [
       {
         name: '류마희귀함',
@@ -4666,6 +4812,7 @@ export const unitList: Unit[] = [
     burgess: false,
     combiDescription: '검호조합, mihawk',
     attack: 'ad',
+    index: 140,
     material: [
       {
         name: '미호크희귀함',
@@ -4712,6 +4859,7 @@ export const unitList: Unit[] = [
     combiDescription: '베르고조합, vergo',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 141,
     material: [
       {
         name: '상디희귀함',
@@ -4766,6 +4914,7 @@ export const unitList: Unit[] = [
     cautionAura: true,
     combiDescription: '사보조합, sabo',
     attack: 'ad',
+    index: 142,
     material: [
       {
         name: '오즈희귀함',
@@ -4813,6 +4962,7 @@ export const unitList: Unit[] = [
     combiDescription: '킬러조합, killer',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 143,
     material: [
       {
         name: '키드희귀함',
@@ -4867,6 +5017,7 @@ export const unitList: Unit[] = [
     combiDescription: '류마조합, ryuma',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 144,
     material: [
       {
         name: '류마희귀함',
@@ -4912,6 +5063,7 @@ export const unitList: Unit[] = [
     combiDescription: '시류조합, shiryu',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 145,
     material: [
       {
         name: '시류희귀함',
@@ -4958,6 +5110,7 @@ export const unitList: Unit[] = [
     combiDescription: '아카이누조합, akainu',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 146,
     material: [
       {
         name: '아카이누희귀함',
@@ -5011,6 +5164,7 @@ export const unitList: Unit[] = [
     combiDescription: '레일리 압살롬x2 | 캐럿조합, carrot',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 147,
     material: [
       {
         name: '쵸파희귀함',
@@ -5048,6 +5202,7 @@ export const unitList: Unit[] = [
     combiDescription: '킨에몬조합, kinemon',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 148,
     material: [
       {
         name: '킨에몬희귀함',
@@ -5095,6 +5250,7 @@ export const unitList: Unit[] = [
     cautionAura: true,
     combiDescription: '모리아 장군좀비 + 압살롬 | 페로나조합, perona ',
     attack: 'ap',
+    index: 149,
     material: [
       {
         name: '모리아전설',
@@ -5148,6 +5304,7 @@ export const unitList: Unit[] = [
     burgess: false,
     combiDescription: '코알라조합, koala ',
     attack: 'ad',
+    index: 150,
     material: [
       {
         name: '징베전설',
@@ -5195,6 +5352,7 @@ export const unitList: Unit[] = [
     burgess: false,
     combiDescription: '해적선1 | 레드포스호조합, redforce',
     attack: 'ad',
+    index: 151,
     material: [
       {
         name: '샹크스전설',
@@ -5233,6 +5391,7 @@ export const unitList: Unit[] = [
     description: '체젠1.25',
     burgess: false,
     combiDescription: '해적선1 | 모비딕호조합, mobydick',
+    index: 152,
     material: [
       {
         name: '죠즈희귀함',
@@ -5279,6 +5438,7 @@ export const unitList: Unit[] = [
     combiDescription: '해적선1 | 반더데켄조합, decken',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 153,
     material: [
       {
         name: '반더데켄희귀함',
@@ -5323,6 +5483,7 @@ export const unitList: Unit[] = [
     description: '공속⬆ +공속(Q) 상초강재료',
     burgess: false,
     combiDescription: '해적선1 | 발라티에조합, baratie',
+    index: 154,
     material: [
       {
         name: '제프희귀함',
@@ -5359,6 +5520,7 @@ export const unitList: Unit[] = [
     burgess: true,
     combiDescription: '해적선1 | 방주맥심조합, maxim',
     attack: 'ap',
+    index: 155,
     material: [
       {
         name: '와이퍼희귀함',
@@ -5403,6 +5565,7 @@ export const unitList: Unit[] = [
     burgess: false,
     combiDescription: '해적선1 | 써니호조합, sunny',
     attack: 'ap',
+    index: 156,
     material: [
       {
         name: '카쿠희귀함',
@@ -5441,6 +5604,7 @@ export const unitList: Unit[] = [
     burgess: false,
     combiDescription: '횟수제한2 | 목재10',
     attack: 'ap',
+    index: 157,
     material: [
       {
         name: '도플라밍고희귀함',
@@ -5470,6 +5634,7 @@ export const unitList: Unit[] = [
     burgess: false,
     combiDescription: '횟수제한2 | 목재10',
     attack: 'ap',
+    index: 158,
     material: [
       {
         name: '베이비5희귀함',
@@ -5500,6 +5665,7 @@ export const unitList: Unit[] = [
     burgess: false,
     combiDescription: '횟수제한2 | 목재10',
     attack: 'ad',
+    index: 159,
     material: [
       {
         name: '비비희귀함',
@@ -5530,6 +5696,7 @@ export const unitList: Unit[] = [
     combiDescription: '횟수제한2 | 목재10',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 160,
     material: [
       {
         name: '에이스전설',
@@ -5562,6 +5729,7 @@ export const unitList: Unit[] = [
     combiDescription: '횟수제한2 | 목재10',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 161,
     material: [
       {
         name: '캐럿히든',
@@ -5594,6 +5762,7 @@ export const unitList: Unit[] = [
     burgess: true,
     combiDescription: '초월쿠마 | 어둠의조커, joker tr',
     attack: 'ad',
+    index: 162,
     material: [
       {
         name: '베르고히든',
@@ -5656,6 +5825,7 @@ export const unitList: Unit[] = [
     combiDescription: '초월쿠마 | 악마의자식, robin tr',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 163,
     material: [
       {
         name: '바르토로메오전설',
@@ -5712,6 +5882,7 @@ export const unitList: Unit[] = [
     combiDescription: '초월쿠마 | 해적왕이될사나이, luffy tr',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 164,
     material: [
       {
         name: '루피전설',
@@ -5760,6 +5931,7 @@ export const unitList: Unit[] = [
     combiDescription: '초월쿠마 | 운명의마술사, hawkins tr',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 165,
     material: [
       {
         name: '조로전설',
@@ -5817,6 +5989,7 @@ export const unitList: Unit[] = [
     combiDescription: '해적선1 초월쿠마 | 혁명군참모총장, sabo tr',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 166,
     material: [
       {
         name: '마르코전설',
@@ -5872,6 +6045,7 @@ export const unitList: Unit[] = [
     combiDescription: '초월쿠마 | 바다의전사, usopp tr',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 167,
     material: [
       {
         name: '카르가라전설',
@@ -5928,6 +6102,7 @@ export const unitList: Unit[] = [
     combiDescription: '초월쿠마 | 최강의검사, zoro tr',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 168,
     material: [
       {
         name: '조로전설',
@@ -5983,6 +6158,7 @@ export const unitList: Unit[] = [
     combiDescription: '초월쿠마 | 바다의협객, jinbe tr',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 169,
     material: [
       {
         name: '징베전설',
@@ -6029,6 +6205,7 @@ export const unitList: Unit[] = [
     burgess: true,
     combiDescription: '초월쿠마 | 순록의사!, chopper tr',
     attack: 'ad',
+    index: 170,
     material: [
       {
         name: '울티전설',
@@ -6072,6 +6249,7 @@ export const unitList: Unit[] = [
     description: '특강2',
     combiDescription: '초월쿠마 | 분노하는맹호, fujitora tr',
     attack: 'ad',
+    index: 171,
     material: [
       {
         name: '후지토라전설',
@@ -6127,6 +6305,7 @@ export const unitList: Unit[] = [
     combiDescription: '초월쿠마 | 오니히메, yamato tr',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 172,
     material: [
       {
         name: '울티전설',
@@ -6188,6 +6367,7 @@ export const unitList: Unit[] = [
     boss: '보잡',
     combiDescription: '초월쿠마 | 해군의홍일점, tashigi tr',
     singleStun: '단일스턴',
+    index: 173,
     material: [
       {
         name: '시저전설',
@@ -6241,6 +6421,7 @@ export const unitList: Unit[] = [
     burgess: true,
     combiDescription: '초월쿠마 | 치밀하고비열한어둠, tichi tr',
     attack: 'ap',
+    index: 174,
     material: [
       {
         name: '검은수염전설',
@@ -6287,6 +6468,7 @@ export const unitList: Unit[] = [
     burgess: false,
     combiDescription: '초월쿠마 | 날씨는맑음, nami tr',
     attack: 'ap',
+    index: 175,
     material: [
       {
         name: '나미전설',
@@ -6341,6 +6523,7 @@ export const unitList: Unit[] = [
     burgess: false,
     combiDescription: '초월쿠마 | 백개의심장을바친자, law tr',
     attack: 'ap',
+    index: 176,
     material: [
       {
         name: '로우전설',
@@ -6388,6 +6571,7 @@ export const unitList: Unit[] = [
     combiDescription: '초월쿠마 | 검은정의를좇는하얀새, lucci tr',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 177,
     material: [
       {
         name: '루치전설',
@@ -6435,6 +6619,7 @@ export const unitList: Unit[] = [
     combiDescription: '초월쿠마 | 소울킹, brook tr',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 178,
     material: [
       {
         name: '라분전설',
@@ -6488,6 +6673,7 @@ export const unitList: Unit[] = [
     burgess: true,
     combiDescription: '초월쿠마 | 지옥에서돌아온자, sanji tr',
     attack: 'ap',
+    index: 179,
     material: [
       {
         name: '상디전설',
@@ -6535,6 +6721,7 @@ export const unitList: Unit[] = [
     combiDescription: '초월쿠마 | 정상해전종결자, shanks tr ',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 180,
     material: [
       {
         name: '샹크스전설',
@@ -6588,6 +6775,7 @@ export const unitList: Unit[] = [
     combiDescription: '초월쿠마 | 다섯번째황제, snakeman tr',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 181,
     material: [
       {
         name: '루피나이트메어전설',
@@ -6641,6 +6829,7 @@ export const unitList: Unit[] = [
     burgess: true,
     combiDescription: '초월쿠마 | 해왕류를다스리는인어공주, shirahoshi tr',
     attack: 'ap',
+    index: 182,
     material: [
       {
         name: '징베전설',
@@ -6689,6 +6878,7 @@ export const unitList: Unit[] = [
     cautionAura: true,
     combiDescription: '초월쿠마 | 전해군대장푸른꿩, aokiji tr',
     attack: 'ap',
+    index: 183,
     material: [
       { name: '제파전설', qty: 1, urn: 'zld', dpname: '제파-전설', index: 124 },
       {
@@ -6739,6 +6929,7 @@ export const unitList: Unit[] = [
     combiDescription: '초월쿠마 | 해군원수붉은개, akainu tr',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 184,
     material: [
       {
         name: '센고쿠전설',
@@ -6794,6 +6985,7 @@ export const unitList: Unit[] = [
     combiDescription: '초월쿠마 | 신세대의이단아, kid tr',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 185,
     material: [
       {
         name: '네코마무시전설',
@@ -6855,6 +7047,7 @@ export const unitList: Unit[] = [
     combiDescription: '초월쿠마 | 해군대장노란원숭이, kizaru tr',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 186,
     material: [
       {
         name: '후지토라전설',
@@ -6914,6 +7107,7 @@ export const unitList: Unit[] = [
     burgess: true,
     combiDescription: '초월쿠마 | 무적의아이언파이러츠, franky tr',
     attack: 'ap',
+    index: 187,
     material: [
       {
         name: '쿠마전설',
@@ -6969,6 +7163,7 @@ export const unitList: Unit[] = [
     combiDescription: '목재10 | 해군영웅거프, garp im',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 188,
     material: [
       {
         name: '스모커전설',
@@ -7017,6 +7212,7 @@ export const unitList: Unit[] = [
     combiDescription: '목재10 | 명왕실버즈레일리, rayleigh im',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 189,
     material: [
       {
         name: '레일리전설',
@@ -7065,6 +7261,7 @@ export const unitList: Unit[] = [
     combiDescription: '목재10 | 해적왕골D로져, roger im',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 190,
     material: [
       {
         name: '센고쿠전설',
@@ -7113,6 +7310,7 @@ export const unitList: Unit[] = [
     combiDescription: '목재10 | 대검호스코퍼가반, gaban im',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 191,
     material: [
       {
         name: '레이쥬전설',
@@ -7160,6 +7358,7 @@ export const unitList: Unit[] = [
     combiDescription: '목재10 | 백수의제왕카이도, kaido im',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 192,
     material: [
       {
         name: '모리아전설',
@@ -7203,6 +7402,7 @@ export const unitList: Unit[] = [
     combiDescription: '목재10 | 대해적흰수염, whitebeard im',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 193,
     material: [
       {
         name: '흰수염전설',
@@ -7249,6 +7449,7 @@ export const unitList: Unit[] = [
     burgess: false,
     combiDescription: '목재10 | 폭풍을몰아오는바람, dragon im',
     attack: 'ap',
+    index: 194,
     material: [
       {
         name: '드래곤전설',
@@ -7295,6 +7496,7 @@ export const unitList: Unit[] = [
     burgess: false,
     combiDescription: '목재10 | 탐식의강철풍선, bigmam tr',
     attack: 'ap',
+    index: 195,
     material: [
       {
         name: '레이쥬전설',
@@ -7341,6 +7543,7 @@ export const unitList: Unit[] = [
     burgess: true,
     combiDescription: '목재10 | 부처님센고쿠, sengoku im',
     attack: 'ap',
+    index: 196,
     material: [
       {
         name: '센고쿠전설',
@@ -7388,6 +7591,7 @@ export const unitList: Unit[] = [
     combiDescription: '목재10 | 천신금사자시키, shiki im',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 197,
     material: [
       {
         name: '시키전설',
@@ -7436,6 +7640,7 @@ export const unitList: Unit[] = [
     combiDescription: '목재10 | 신념의흑완제트, z im',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 198,
     material: [
       { name: '제파전설', qty: 1, urn: 'zld', dpname: '제파-전설', index: 124 },
       {
@@ -7479,6 +7684,7 @@ export const unitList: Unit[] = [
     combiDescription: '압살롬 목재5 | 세이브10회 | 천냥광대, buggy et',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 199,
     material: [
       {
         name: '나미전설',
@@ -7548,6 +7754,7 @@ export const unitList: Unit[] = [
     combiDescription: '초월쿠마 목재5 | 세이브20회 | 해적왕자, cavendish et',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 200,
     material: [
       {
         name: '로우전설',
@@ -7603,6 +7810,7 @@ export const unitList: Unit[] = [
     burgess: true,
     combiDescription: '목재5 | 세이브15회 | 아마존릴리의여제, hancock et',
     singleStun: '단일스턴',
+    index: 201,
     material: [
       {
         name: '핸콕전설',
@@ -7664,6 +7872,7 @@ export const unitList: Unit[] = [
     combiDescription: '해적선2 목재5 | 세이브35회 | 매의눈미호크, mihawk et',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 202,
     material: [
       {
         name: '페로나히든',
@@ -7710,6 +7919,7 @@ export const unitList: Unit[] = [
     combiDescription: '목재5 | 세이브25회 | 파이러츠왕녀, vivi et',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 203,
     material: [
       {
         name: '크로커다일제한됨',
@@ -7778,6 +7988,7 @@ export const unitList: Unit[] = [
     combiDescription: '목재5 | 세이브5회 | 화권의에이스, ace et',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 204,
     material: [
       {
         name: '에이스변화됨',
@@ -7838,6 +8049,7 @@ export const unitList: Unit[] = [
     combiDescription: '목재5 | 세이브30회 | 참된호걸, oden et',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 205,
     material: [
       {
         name: '토키전설',
@@ -7893,6 +8105,7 @@ export const unitList: Unit[] = [
     combiDescription: '5000골 목재5',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 206,
     material: [
       {
         name: '레베카히든',
@@ -7941,6 +8154,7 @@ export const unitList: Unit[] = [
     combiDescription: '35000골 목재5',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 207,
     material: [
       {
         name: '크래커전설',
@@ -7996,6 +8210,7 @@ export const unitList: Unit[] = [
     cautionAura: true,
     combiDescription: '5000골 목재5',
     attack: 'ad',
+    index: 208,
     material: [
       {
         name: '아카이누히든',
@@ -8043,6 +8258,7 @@ export const unitList: Unit[] = [
     burgess: true,
     combiDescription: '고대의 배 5000골 목재5',
     attack: 'ad',
+    index: 209,
     material: [
       { name: '킹전설', qty: 1, urn: 'kingld', dpname: '킹-전설', index: 113 },
       {
@@ -8077,6 +8293,7 @@ export const unitList: Unit[] = [
     attack: 'ap',
     boss: '보잡',
     singleStun: '단일스턴',
+    index: 210,
     material: [
       {
         name: '히루루크전설',
@@ -8125,6 +8342,7 @@ export const unitList: Unit[] = [
     combiDescription: '해적선1 5000골 목재5',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 211,
     material: [
       {
         name: '시노부전설',
@@ -8164,6 +8382,7 @@ export const unitList: Unit[] = [
     boss: '광잡',
     combiDescription: '토큰2개 5000골 목재8',
     attack: 'ap',
+    index: 212,
     material: [
       {
         name: '베르고히든',
@@ -8210,6 +8429,7 @@ export const unitList: Unit[] = [
     combiDescription: '해적선1 목재5 5000골',
     attack: 'ap',
     singleStun: '단일스턴',
+    index: 213,
     material: [
       {
         name: '시저전설',
@@ -8258,6 +8478,7 @@ export const unitList: Unit[] = [
     combiDescription: '카미조 토우마 + 행운의 토큰 + 목재7 10000골',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 214,
     material: [
       {
         name: '토키전설',
@@ -8305,6 +8526,7 @@ export const unitList: Unit[] = [
     combiDescription: '이시야마 요미 + 행운의 토큰 + 목재7 10000골',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 215,
     material: [
       {
         name: '시류히든',
@@ -8353,6 +8575,7 @@ export const unitList: Unit[] = [
     combiDescription: '요츠바 토큰업 + 행운의 토큰 + 목재7 10000골',
     attack: 'ad',
     singleStun: '단일스턴',
+    index: 216,
     material: [
       {
         name: '쿠마전설',
@@ -8384,6 +8607,7 @@ export const unitList: Unit[] = [
     description: '스킬 발동시 마젠 공중이동',
     combiDescription: '이치의 율자 + 행운의 토큰 + 목재7 10000골',
     attack: 'ap',
+    index: 217,
     material: [
       {
         name: '레이쥬전설',
@@ -8429,6 +8653,7 @@ export const unitList: Unit[] = [
     description: '마증 끝딜 블링크',
     combiDescription: '나루토 선인모드 + 행운의 토큰 + 목재7 10000골',
     attack: 'ap',
+    index: 218,
     material: [
       {
         name: '캐럿변화됨',
@@ -8468,6 +8693,7 @@ export const unitList: Unit[] = [
     burgess: true,
     combiDescription: '하네카와 츠바사 + 행운의 토큰 + 목재7 10000골',
     attack: 'ap',
+    index: 219,
     material: [
       {
         name: '루치전설',
@@ -8514,6 +8740,7 @@ export const unitList: Unit[] = [
     burgess: true,
     combiDescription: '이치고 토큰업 + 랜유1기 + 행운의 토큰 + 목재7 10000골',
     attack: 'ap',
+    index: 220,
     material: [
       {
         name: '에이스변화됨',
@@ -8553,6 +8780,7 @@ export const unitList: Unit[] = [
     burgess: true,
     combiDescription: '센토 이즈스 + 랜유1기 + 행운의 토큰 + 목재7 10000골',
     attack: 'ap',
+    index: 221,
     material: [
       {
         name: '네코마무시전설',
@@ -8591,6 +8819,7 @@ export const unitList: Unit[] = [
     burgess: true,
     combiDescription: '아가미 라이토 + 랜유1기 + 행운의 토큰 + 목재7 10000골',
     attack: 'ap',
+    index: 222,
     material: [
       {
         name: '페로나히든',

@@ -7,8 +7,6 @@ export type Unit = {
   description?: string;
   combiDescription?: string;
   attack?: 'ap' | 'ad';
-  material?: Material[];
-  lowestMaterial?: LowestMaterial[];
   decreaseSpeed?: number;
   onOffDecreaseSpeed?: number;
   decreaseDefense?: number;
@@ -20,6 +18,9 @@ export type Unit = {
   armorBreak?: boolean;
   cautionAura?: boolean;
   single?: number;
+  index: number;
+  material?: Material[];
+  lowestMaterial?: LowestMaterial[];
 };
 
 export type Material = {
