@@ -15,9 +15,15 @@ export const unitSlice = createSlice({
     minusUnitQty: (state, action: PayloadAction<number>) => {
       state[action.payload].qty -= 1;
     },
+    setUnitQty: (
+      state,
+      action: PayloadAction<{ value: number; index: number }>,
+    ) => {
+      state[action.payload.index].qty = action.payload.value;
+    },
   },
 });
 
-export const { addUnitQty, minusUnitQty } = unitSlice.actions;
+export const { addUnitQty, minusUnitQty, setUnitQty } = unitSlice.actions;
 
 export default unitSlice.reducer;
