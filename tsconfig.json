@@ -8,6 +8,7 @@
     "forceConsistentCasingInFileNames": false,
     "noEmit": true,
     "esModuleInterop": true,
+    "types": ["@emotion/react/types/css-prop"],
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -21,7 +22,8 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@public/*": ["/public/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
