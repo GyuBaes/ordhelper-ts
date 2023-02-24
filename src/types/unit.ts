@@ -1,7 +1,19 @@
 export type Unit = {
   name: string;
   qty: number;
-  grade: string;
+  grade:
+    | 'common'
+    | 'uncommon'
+    | 'unique'
+    | 'rare'
+    | 'legendary'
+    | 'hidden'
+    | 'changed'
+    | 'transcendence'
+    | 'immortal'
+    | 'eternity'
+    | 'limited'
+    | 'randomltd';
   urn: string;
   dpname: string;
   description?: string;
