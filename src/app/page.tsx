@@ -3,48 +3,14 @@
 import { Global } from '@emotion/react';
 import { cssReset } from '@/styles/global';
 import styled from '@emotion/styled';
-import { getPercent, getLessUnit, setCombinationUnit } from '@/calculator';
-import { useSelector, useDispatch } from 'react-redux';
-import type { RootState } from '@/store';
-import UnitList from '@/components/UnitList';
-import { Unit } from '@/types/Unit';
+import UnitListContainer from '@/components/UnitListContainer';
 
 const Page = () => {
-  const tempArray = useSelector((state: RootState) => state.unit);
-  const dispatch = useDispatch();
-  const unitList: Array<Unit[]> = [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-  ];
-  // const unitList: Array<Unit[]> = new Array(12).fill([]);
-  let gradeTemp = 'common';
-  let idx = 0;
-
-  tempArray.map(el => {
-    if (gradeTemp !== el.grade) {
-      gradeTemp = el.grade;
-      idx++;
-    }
-    unitList[idx].push(el);
-  });
-
   return (
     <>
       <Global styles={cssReset} />
       <Container>
-        {unitList.map(el => {
-          return <UnitList key={el[0].grade} unitList={el} />;
-        })}
+        <UnitListContainer />
       </Container>
     </>
   );
