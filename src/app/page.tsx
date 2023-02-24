@@ -4,12 +4,17 @@ import { Global } from '@emotion/react';
 import { cssReset } from '@/styles/global';
 import styled from '@emotion/styled';
 import UnitListContainer from '@/components/UnitListContainer';
+import { IBM_Plex_Sans_KR } from '@next/font/google';
 
+const plex = IBM_Plex_Sans_KR({
+  subsets: ['latin'],
+  weight: ['400'],
+});
 const Page = () => {
   return (
     <>
       <Global styles={cssReset} />
-      <Container>
+      <Container className={plex.className}>
         <UnitListContainer />
       </Container>
     </>
