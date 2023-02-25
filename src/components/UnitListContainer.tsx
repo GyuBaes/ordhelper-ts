@@ -32,7 +32,7 @@ const UnitListContainer = () => {
       <Section flex={0.8}>
         <UnitList unitList={unique} />
       </Section>
-      <Section flex={0.9}>
+      <Section flex={0.8}>
         <UnitList unitList={rare} />
       </Section>
       <Section flex={1}>
@@ -61,5 +61,5 @@ const Section = styled.div<SectionProps>`
   display: flex;
   flex-direction: column;
   flex: ${props => props.flex};
-  padding-right: 5px;
+  padding-right: 8px;
 `;

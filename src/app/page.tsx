@@ -27,4 +27,6 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
+  padding: 0 0 0 8px;
+  background-color: #d4d4d4;
 `;

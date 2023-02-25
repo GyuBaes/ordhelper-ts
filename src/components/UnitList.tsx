@@ -3,6 +3,9 @@
 import styled from '@emotion/styled';
 import { Unit } from '@/types/Unit';
 import UnitComponent from './UnitComponent';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { resetQty } from '@/reducer/unitList';
 
 interface Props {
   unitList: Unit[];
@@ -27,13 +30,29 @@ const grade: GradeType = {
 };
 
 const UnitList = ({ unitList }: Props) => {
+  const [seeUnitlist, setSeeUnitlist] = useState(true);
+  const dispatch = useDispatch();
+
+  const handleResetQty = () => {
+    dispatch(resetQty(unitList[0].grade));
+  };
+
   const gradeProperty = unitList[0].grade;
+
   return (
     <Container>
-      <Grade>{grade[gradeProperty]}</Grade>
-      {unitList.map(el => {
-        return <UnitComponent key={el.name} unit={el} />;
-      })}
+      <ButtonContainer>
+        <button onClick={() => setSeeUnitlist(!seeUnitlist)}>
+          <Subtitle>{grade[gradeProperty]}</Subtitle>
+        </button>
+        <button onClick={handleResetQty}>
+          <Subtitle>{`초기화`}</Subtitle>
+        </button>
+      </ButtonContainer>
+      {seeUnitlist &&
+        unitList.map(el => {
+          return <UnitComponent key={el.name} unit={el} />;
+        })}
     </Container>
   );
 };
@@ -41,9 +60,13 @@ const UnitList = ({ unitList }: Props) => {
 export default UnitList;
 
 const Container = styled.div`
-  padding-bottom: 20px;
+  padding-bottom: 9.1px;
 `;
-const Grade = styled.span`
+const Subtitle = styled.span`
   font-size: 13px;
   display: block;
+`;
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
