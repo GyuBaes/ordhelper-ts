@@ -192,7 +192,7 @@ export const unitList: Unit[] = [
     dpname: '로빈',
     index: 12,
     material: [
-      { name: '나미', qty: 1, urn: 'nami', dpname: '나미-흔함', index: 4 },
+      { name: '나미', qty: 1, urn: 'nami', dpname: '나미-흔함', index: 3 },
       { name: '상디', qty: 1, urn: 'sanji', dpname: '상디-흔함', index: 5 },
     ],
   },
