@@ -25,7 +25,8 @@ export const getHaveUnitList = <T extends Unit[], U extends Unit>(
   const result: Material[] = [];
 
   const recursive = (queue: Material[]) => {
-    if (!queue.length) return;
+    if (!queue?.length) return;
+
     unit = queue.shift();
     // 만약 다 가지고 있다면
     if (copyUnitList[unit?.index as number].qty >= (unit?.qty as number)) {
@@ -38,14 +39,11 @@ export const getHaveUnitList = <T extends Unit[], U extends Unit>(
       copyUnitList[unit?.index as number].qty !== 0 &&
       copyUnitList[unit?.index as number].qty < (unit?.qty as number)
     ) {
-      [(unit as Material).qty, copyUnitList[unit?.index as number].qty] = [
-        copyUnitList[unit?.index as number].qty,
-        (unit as Material).qty,
-      ];
-      result.push(unit as Material);
-      copyUnitList[unit?.index as number].qty -= (unit as Material).qty;
+      result.push(cloneDeep(copyUnitList[unit?.index as number]));
 
-      for (let i = 0; i < copyUnitList[unit?.index as number].qty; i++) {
+      (unit as Material).qty -= copyUnitList[unit?.index as number].qty;
+
+      for (let i = 0; i < (unit as Material).qty; i++) {
         copyUnitList[unit?.index as number].material?.forEach(el => {
           if (el.name !== '위습') queue.push(el);
         });
@@ -59,9 +57,11 @@ export const getHaveUnitList = <T extends Unit[], U extends Unit>(
       for (let i = 0; i < (unit as Material).qty; i++) {
         copyUnitList[unit?.index as number].material?.forEach(el => {
           if (el.name !== '위습') queue.push(el);
+          // queue.push(el);
         });
       }
     }
+
     recursive(queue);
   };
 
@@ -79,9 +79,9 @@ export const getPercent = <T extends Unit[], U extends Unit>(
   let percent = 0;
 
   haveUnitList.forEach(el => {
-    haveUnitQty += getSumCombinaionQty(curUnitList[el.index]);
+    haveUnitQty += el.qty;
   });
-
+  haveUnitQty += curUnitList[0].qty;
   percent = (haveUnitQty / sumQty) * 100;
   return percent;
 };
@@ -142,8 +142,7 @@ export const setCombinationUnit = <T extends Unit[], U extends Unit>(
   curUnitList: T,
   curUnit: U,
 ) => {
-  curUnit.qty += 1;
-  const copyUnitList = cloneDeep(curUnitList);
+  curUnitList[curUnit.index].qty += 1;
   const combiUnitQueue = cloneDeep(curUnit.material);
   let unit: Material | undefined;
 
@@ -151,30 +150,30 @@ export const setCombinationUnit = <T extends Unit[], U extends Unit>(
     if (!queue.length) return;
     unit = queue.shift();
     // 만약 다 가지고 있다면
-    if (copyUnitList[unit?.index as number].qty >= (unit?.qty as number)) {
-      copyUnitList[unit?.index as number].qty -= unit?.qty as number;
+    if (curUnitList[unit?.index as number].qty >= (unit?.qty as number)) {
+      curUnitList[unit?.index as number].qty -= unit?.qty as number;
     }
 
     // 0개는 아니며 필요 개수보다 작다면
     if (
-      copyUnitList[unit?.index as number].qty !== 0 &&
-      copyUnitList[unit?.index as number].qty < (unit?.qty as number)
+      curUnitList[unit?.index as number].qty !== 0 &&
+      curUnitList[unit?.index as number].qty < (unit?.qty as number)
     ) {
-      (unit as Material).qty -= copyUnitList[unit?.index as number].qty;
-      copyUnitList[unit?.index as number].qty -=
-        copyUnitList[unit?.index as number].qty;
+      (unit as Material).qty -= curUnitList[unit?.index as number].qty;
+      curUnitList[unit?.index as number].qty -=
+        curUnitList[unit?.index as number].qty;
 
       for (let i = 0; i < (unit as Material).qty; i++) {
-        copyUnitList[unit?.index as number].material?.forEach(el => {
+        curUnitList[unit?.index as number].material?.forEach(el => {
           queue.push(el);
         });
       }
     }
 
     // 0개라면
-    if (copyUnitList[unit?.index as number].qty === 0) {
+    if (curUnitList[unit?.index as number].qty === 0) {
       for (let i = 0; i < (unit as Material).qty; i++) {
-        copyUnitList[unit?.index as number].material?.forEach(el => {
+        curUnitList[unit?.index as number].material?.forEach(el => {
           queue.push(el);
         });
       }
@@ -183,5 +182,5 @@ export const setCombinationUnit = <T extends Unit[], U extends Unit>(
   };
 
   recursive(combiUnitQueue as Material[]);
-  return copyUnitList;
+  return curUnitList;
 };
