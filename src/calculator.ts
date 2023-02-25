@@ -81,7 +81,7 @@ export const getPercent = <T extends Unit[], U extends Unit>(
   haveUnitList.forEach(el => {
     haveUnitQty += el.qty;
   });
-  haveUnitQty += curUnitList[0].qty;
+  if (curUnit.grade !== 'common') haveUnitQty += curUnitList[0].qty;
   percent = (haveUnitQty / sumQty) * 100;
   return percent;
 };

@@ -24,7 +24,7 @@ const UnitComponent = ({ unit }: Props) => {
 
   const handleCombiantion = (e: React.MouseEvent) => {
     e.preventDefault();
-    // if (percent === 100) dispatch(setCombination(unit));
+    if (percent === 100) dispatch(setCombination(unit));
   };
 
   const qtyHandler = () => {
@@ -48,7 +48,7 @@ const UnitComponent = ({ unit }: Props) => {
           width={28}
           height={28}
         />
-        <Percent percent={percent} />
+        <Percent percent={percent} name={unit.name} />
         <Name
           attack={unit.attack}
           onClick={qtyHandler}
