@@ -41,13 +41,13 @@ const UnitComponent = ({ unit }: Props) => {
 
   return (
     <Container>
+      <Image
+        alt={`${unit.dpname}`}
+        src={`/images/${unit.urn}.webp`}
+        width={28}
+        height={28}
+      />
       <UnitWrapper>
-        <Image
-          alt={`${unit.dpname}`}
-          src={`/images/${unit.urn}.webp`}
-          width={28}
-          height={28}
-        />
         <Percent percent={percent} name={unit.name} />
         <Name
           attack={unit.attack}
@@ -56,17 +56,17 @@ const UnitComponent = ({ unit }: Props) => {
         >
           {unit.dpname}
         </Name>
-      </UnitWrapper>
 
-      <QtyInput
-        value={unit.qty}
-        type="text"
-        onClick={() => {
-          inputRef.current?.select();
-        }}
-        onChange={setQty}
-        ref={inputRef}
-      />
+        <QtyInput
+          value={unit.qty}
+          type="text"
+          onClick={() => {
+            inputRef.current?.select();
+          }}
+          onChange={setQty}
+          ref={inputRef}
+        />
+      </UnitWrapper>
     </Container>
   );
 };
@@ -77,7 +77,6 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   height: 28px;
-  justify-content: space-between;
   background-color: rgb(250 250 250);
   margin-bottom: 1px;
 `;
@@ -102,10 +101,7 @@ const Name = styled.span<NameProps>`
 
 const UnitWrapper = styled.div`
   display: flex;
+  flex: 1;
   justify-content: space-between;
   align-items: center;
 `;
-
-// const Percent = styled.span`
-//   font-size: 11px;
-// `;
