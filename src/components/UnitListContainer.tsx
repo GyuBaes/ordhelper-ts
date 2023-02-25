@@ -25,11 +25,11 @@ const UnitListContainer = () => {
   const randomltd = unitList.filter(unit => unit?.grade === 'randomltd');
   return (
     <>
-      <Section flex={0.8}>
+      <Section flex={0.7}>
         <UnitList unitList={common} />
         <UnitList unitList={uncommon} />
       </Section>
-      <Section flex={0.8}>
+      <Section flex={0.7}>
         <UnitList unitList={unique} />
       </Section>
       <Section flex={0.8}>
@@ -61,5 +61,5 @@ const Section = styled.div<SectionProps>`
   display: flex;
   flex-direction: column;
   flex: ${props => props.flex};
-  padding-right: 8px;
+  padding-right: 5px;
 `;
