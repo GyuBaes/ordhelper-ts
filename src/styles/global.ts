@@ -47,4 +47,10 @@ export const cssReset = css`
     border-collapse: collapse;
     border-spacing: 0;
   }
+  input:focus {
+    outline: none;
+  }
+  input {
+    border: none;
+  }
 `;
